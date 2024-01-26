@@ -11,15 +11,15 @@
     background-position: center
 
     .nav-container
-    display: flex 
-    justify-content: space-between
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    padding: 1.5rem 2rem
-    background-color: $black
-    z-index: 10
+        display: flex 
+        justify-content: space-between
+        position: fixed
+        top: 0
+        left: 0
+        width: 100%
+        padding: 1.5rem 2rem
+        background-color: $black
+        z-index: 10
 
     
     .brand
@@ -27,7 +27,7 @@
         font-size: 2rem
         @include main-hover
     
-    &-navbar
+    .nav-container-navbar
         display: flex
         align-items: center
         height: 100%
@@ -43,13 +43,13 @@
         font-size: 2rem
         color: #fff
         display: none
-
+    
     .title-container
         color: $light-color
         display: flex
         flex-direction: column
         align-items: center
-        justify-items: center
+        justify-content: center
         height: 100%
 
         h2
