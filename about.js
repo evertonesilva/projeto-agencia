@@ -1,19 +1,33 @@
 class MobileNavBar{
-    constructor(faBar, navList, navLink) {
-        this.faBars = document.querySelector(fas);
-        this.navList = document.querySelector(nav-container);
+    constructor(faBar, navList, navLinks) {
+        this.faBar = document.querySelector(faBar);
+        this.navList = document.querySelector(navList);
         this.navLinks = document.querySelectorAll(navLinks);
         this.activeClass = "active";
+    this.handleClick = this.handleClick.bind(this);
+    }
+
+    handleClick(){
+        this.navList.classList.toggle(this.activeClass);
     }
 
     addClickEvent(){
-        this.faBars.addEventListener("Click", () => console.log("hey"));
+        this.faBar.addEventListener("click", this.handleClick);
+    }
+    
+    init() {
+        if (this.faBar){
+            this.addClickEvent();
+    
+        }
+        return this;
     }
 }
 
-init() {
-    if (this.faBar){
-        this,addClickEvent();
+const faBar = new MobileNavBar(
+    ".fa-bars",
+    ".nav-container",
+    ".nav-container li"
+);
 
-    }
-}
+faBar.init();
